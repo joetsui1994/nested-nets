@@ -36,7 +36,7 @@ function App() {
     setTimeDelta(preSaveTimeDelta);
     setAmbientTemp(preSaveAmbientTemp);
     setImmobility(preSaveImmobility);
-    setSelfRadius(preSaveSelfRadius);
+    setLocalAttraction(preSaveLocalAttraction);
     setDistScaling(preSaveDistScaling);
     // reset something-has-changed
     setSettingsChanged(false);
@@ -81,13 +81,13 @@ function App() {
     setPreSaveTimeDelta(params.defaultTimeDelta)
     setPreSaveAmbientTemp(params.defaultAmbientTemp)
     setPreSaveImmobility(params.defaultImmobility);
-    setPreSaveSelfRadius(params.defaultSelfRadius);
+    setPreSaveLocalAttraction(params.defaultLocalAttraction);
     setPreSaveDistScaling(params.defaultDistScaling);
     setSettingsChanged(
       timeDelta !== params.defaultTimeDelta ||
       ambientTemp !== params.defaultAmbientTemp ||
       immobility !== params.defaultImmobility ||
-      selfRadius !== params.defaultSelfRadius ||
+      localAttraction !== params.defaultLocalAttraction ||
       distScaling !== params.defaultDistScaling
     );
   }, [resetDefaultTrigger]);
@@ -115,11 +115,11 @@ function App() {
     setSettingsChanged(val !== immobility);
   };
 
-  const [selfRadius, setSelfRadius] = React.useState(params.defaultSelfRadius);
-  const [preSaveSelfRadius, setPreSaveSelfRadius] = React.useState(selfRadius);
-  const handleSelfRadiusOnChange = (event, val) => {
-    setPreSaveSelfRadius(val);
-    setSettingsChanged(val !== selfRadius);
+  const [localAttraction, setLocalAttraction] = React.useState(params.defaultLocalAttraction);
+  const [preSaveLocalAttraction, setPreSaveLocalAttraction] = React.useState(localAttraction);
+  const handleLocalAttractionOnChange = (event, val) => {
+    setPreSaveLocalAttraction(val);
+    setSettingsChanged(val !== localAttraction);
   };
 
   const [distScaling, setDistScaling] = React.useState(params.defaultDistScaling);
@@ -143,8 +143,8 @@ function App() {
           handleAmbientTempOnChange={handleAmbientTempOnChange}
           immobility={preSaveImmobility}
           handleImmobilityOnChange={handleImmobilityOnChange}
-          selfRadius={preSaveSelfRadius}
-          handleSelfRadiusOnChange={handleSelfRadiusOnChange}
+          localAttraction={preSaveLocalAttraction}
+          handleLocalAttractionOnChange={handleLocalAttractionOnChange}
           distScaling={preSaveDistScaling}
           handleDistScalingOnChange={handleDistScalingOnChange}
           handleResetDefaultsOnClick={handleResetDefaultsOnClick}
@@ -160,7 +160,7 @@ function App() {
           timeDelta={timeDelta}
           ambientTemp={ambientTemp}
           immobility={immobility}
-          selfRadius={selfRadius}
+          localAttraction={localAttraction}
           distScaling={distScaling}
         />
       </div>

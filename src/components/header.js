@@ -39,7 +39,7 @@ function Header() {
                 <span style={{ fontSize: 8 }}>(SELF)</span>EXCITING-NETWORK
             </div>
             <div className={classes.version}>
-                v1.0.5
+                v1.1.2
                 <span className={classes.info}>
                     (created by J.Tsui)
                 </span>

@@ -70,7 +70,7 @@ function SettingsPanel(props) {
     const { timeDelta, handleTimeDeltaOnChange } = props;
     const { ambientTemp, handleAmbientTempOnChange } = props;
     const { immobility, handleImmobilityOnChange } = props;
-    const { selfRadius, handleSelfRadiusOnChange } = props;
+    const { localAttraction, handleLocalAttractionOnChange } = props;
     const { distScaling, handleDistScalingOnChange } = props;
 
     const _onRestart = () => {
@@ -146,12 +146,12 @@ function SettingsPanel(props) {
                 Local attraction (importance of local ties):
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
-                        value={1/selfRadius}
-                        defaultValue={params.defaultSelfRadius}
-                        step={0.1}
-                        min={0.001}
+                        value={localAttraction}
+                        defaultValue={params.defaultLocalAttraction}
+                        step={1}
+                        min={0}
                         max={500}
-                        onChangeHandler={handleSelfRadiusOnChange}
+                        onChangeHandler={handleLocalAttractionOnChange}
                     />
                 </div>
             </div>

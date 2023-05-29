@@ -78,7 +78,7 @@ function calculateNextLocP(pId, tree, treeS, props) {
         
         // if considering pLoc (self-gravitation)
         if (d.id === pLoc) {
-            locProbMap[d.id] = (locWsSum + props.immobility)/props.selfRadius;
+            locProbMap[d.id] = (locWsSum + props.immobility)*props.localAttraction;
         } else { // if not
             // add ambient temperature
             locProbMap[d.id] = (locWsSum + props.ambientTemp)/(locDist**props.distScaling);
