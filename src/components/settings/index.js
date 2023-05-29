@@ -146,11 +146,11 @@ function SettingsPanel(props) {
                 Local attraction (importance of local ties):
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
-                        value={selfRadius}
+                        value={1/selfRadius}
                         defaultValue={params.defaultSelfRadius}
-                        step={0.001}
+                        step={0.1}
                         min={0.001}
-                        max={5}
+                        max={500}
                         onChangeHandler={handleSelfRadiusOnChange}
                     />
                 </div>
