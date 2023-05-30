@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nested-nets/static/css/main.bd56aa89.css",
-    "main.js": "/nested-nets/static/js/main.bd99565d.js",
+    "main.js": "/nested-nets/static/js/main.24f18d9b.js",
     "static/js/787.2cf92c97.chunk.js": "/nested-nets/static/js/787.2cf92c97.chunk.js",
     "index.html": "/nested-nets/index.html",
     "main.bd56aa89.css.map": "/nested-nets/static/css/main.bd56aa89.css.map",
-    "main.bd99565d.js.map": "/nested-nets/static/js/main.bd99565d.js.map",
+    "main.24f18d9b.js.map": "/nested-nets/static/js/main.24f18d9b.js.map",
     "787.2cf92c97.chunk.js.map": "/nested-nets/static/js/787.2cf92c97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd56aa89.css",
-    "static/js/main.bd99565d.js"
+    "static/js/main.24f18d9b.js"
   ]
 }
