@@ -2,6 +2,7 @@ import { makeStyles } from '@mui/styles';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import Latex from "react-latex-next";
 
 import CustomSlider from './slider';
 import ResetButton from './reset';
@@ -104,7 +105,7 @@ function SettingsPanel(props) {
                 Restart <span style={{ color: settingsChanged ? '#fff' : '#484848', opacity: settingsChanged ? 0.9 : 0.4 }}>&nbsp;(to apply changes)</span>
             </CustomButton>
             <div className={classes.panel} style={{ marginTop: 5 }}>
-                Size of time-step (milliseconds):
+                Jump interval, <Latex>$\Delta t$</Latex> (milliseconds):
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
                         value={timeDelta}
@@ -117,7 +118,7 @@ function SettingsPanel(props) {
                 </div>
             </div>
             <div className={classes.panel}>
-                Ambient (particle) temperature:
+                Ambient (particle) temperature, <Latex>$w_T$</Latex>:
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
                         value={ambientTemp}
@@ -130,7 +131,7 @@ function SettingsPanel(props) {
                 </div>
             </div>
             <div className={classes.panel}>
-                Immobility-level (tendency to remain):
+                Immobility-level, <Latex>$w_0$</Latex> (tendency to remain):
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
                         value={immobility}
@@ -143,7 +144,7 @@ function SettingsPanel(props) {
                 </div>
             </div>
             <div className={classes.panel}>
-                Local attraction (importance of local ties):
+                Local-attraction, <Latex>$d_0$</Latex> (importance of local ties):
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
                         value={localAttraction}
@@ -156,7 +157,7 @@ function SettingsPanel(props) {
                 </div>
             </div>
             <div className={classes.panel}>
-                Distance scaling (lambda):
+                Distance-scaling, <Latex>$\lambda$</Latex>:
                 <div style={{ textAlign: 'center' }}>
                     <CustomSlider
                         value={distScaling}
